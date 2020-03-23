@@ -35,6 +35,7 @@ Data Overview – Allow the user to filter out suicides socio-economic data tabl
 Country Trend – Allow the user to visualize suicides trend by a specific country.
 Descriptive Analysis – Interactive dashboard with bar chart, pie chart and line graph are included in the demo to how suicide rate is related to each factor.
 Inferential Analysis – Confidence Interval and Linear Regression techniques are applied.
+
 An example of the app may look like the picture below:
 
 Section 4: Specific Methodology
