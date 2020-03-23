@@ -23,7 +23,7 @@ Problems we want to identify may include and not limited to:
 
 These problems are brought up and we will proceed with the analysis following the model below.
 
-[](IMG/2.1.png)
+![](IMG/2.1.png)
 
 # Section 3: Data Sources
 The dataset we use is Suicide Rates Overview 1985 to 2015 dataset from Kaggle1.
@@ -35,7 +35,8 @@ The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP 
 
 We developed an interactive dashboard for demo purpose, providing a user-friendly window that the user can filter data as he/she wants. Our shiny app consists of four modules:
 
-![](IMG/2.3.png)
+<div align=center><img width="400" height="400" src="IMG/2.3.png"/></div>
+
 
 - Data Overview – Allow the user to filter out suicides socio-economic data table based on country, year and age. The data extracted can be examined by search function and can be sorted by different variables.
 - Country Trend – Allow the user to visualize suicides trend by a specific country.
@@ -85,13 +86,11 @@ Firstly, we grouped data by years, gender and age and drawn interactive graphs b
 
 Besides, we can notice that the suicides number of males had always outnumbered that of females. It accounted for about 77.7% of the total suicides number from 1985 to 2015 and increased sharply since 1988.
 
-<div align=center><img width="400" height="300" src="IMG/2.6.png"/></div>
-<div align=center><img width="400" height="300" src="IMG/2.7.png"/></div>
+<div align=center><img width="400" height="300" src="IMG/2.6.png"/></div><div align=center><img width="400" height="300" src="IMG/2.7.png"/></div>
 
 It is extremely necessary to mention that people above age 75 had stronger intention to commit suicide than others. They nearly made up ¼ of the total suicides. But fortunately, it seems like the suicides number of them had experienced a smooth decrease from 1900 to 2015.
 
-![](IMG/2.8.png)
-![](IMG/2.9.png)
+<div align=center><img width="400" height="300" src="IMG/2.8.png"/></div><div align=center><img width="400" height="300" src="IMG/2.9.png"/></div>
 
 ### Continent
 In this section, we are still trying to figure out that how the number of suicides would change with time for different gender and age but based on the continental classification.
