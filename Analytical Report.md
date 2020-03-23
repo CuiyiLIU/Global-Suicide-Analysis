@@ -26,7 +26,7 @@ These problems are brought up and we will proceed with the analysis following th
 ![](IMG/2.1.png)
 
 # Section 3: Data Sources
-The dataset we use is Suicide Rates Overview 1985 to 2015 dataset from Kaggle1.
+The dataset we use is Suicide Rates Overview 1985 to 2016 dataset from Kaggle1.
 The dataset has 12 attributes, being:
 
 ![](IMG/2.2.png)
