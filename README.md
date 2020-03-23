@@ -1,2 +1,0 @@
-# Global-Suicide-Analysis
-Our study aims to explore the suicides pattern from the year 1985 to the year 2016 through global, continent and country scales, as well as gender, age, GDP and generation factors. The descriptive exploration obtained will then be verified through statistical inferential analysis. We set the target audience as World Health Organization officer who are concerned to track the trend and factors associated with suicides, as we wish the analysis will provide insights and inspire necessary actions taken on suicides prevention. 
