@@ -35,7 +35,7 @@ The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP 
 
 We developed an interactive dashboard for demo purpose, providing a user-friendly window that the user can filter data as he/she wants. Our shiny app consists of four modules:
 
-<div align=center><img width="550" height="550" src="IMG/2.3.png"/></div>
+<div align=center><img width="600" height="450" src="IMG/2.3.png"/></div>
 
 
 - Data Overview – Allow the user to filter out suicides socio-economic data table based on country, year and age. The data extracted can be examined by search function and can be sorted by different variables.
@@ -86,7 +86,7 @@ Firstly, we grouped data by years, gender and age and drawn interactive graphs b
 
 Besides, we can notice that the suicides number of males had always outnumbered that of females. It accounted for about 77.7% of the total suicides number from 1985 to 2015 and increased sharply since 1988.
 
-<img width="450" height="350" src="IMG/2.6.png"/><img width="450" height="350" src="IMG/2.7.png"/>
+<img width="420" height="300" src="IMG/2.6.png"/><img width="420" height="300" src="IMG/2.7.png"/>
 
 It is extremely necessary to mention that people above age 75 had stronger intention to commit suicide than others. They nearly made up ¼ of the total suicides. But fortunately, it seems like the suicides number of them had experienced a smooth decrease from 1900 to 2015.
 
