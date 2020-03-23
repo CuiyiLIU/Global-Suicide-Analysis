@@ -17,10 +17,15 @@ Section 2: Overall Concept
 Our study aims to explore the suicides pattern from the year 1985 to the year 2016 through global, continent and country scales, as well as gender, age, GDP and generation factors. The descriptive exploration obtained will then be verified through statistical inferential analysis. We set the target audience as World Health Organization officer who are concerned to track the trend and factors associated with suicides, as we wish the analysis will provide insights and inspire necessary actions taken on suicides prevention.
 
 Problems we want to identify may include and not limited to:
+
 • What is the geographical distribution for suicides if we search by continents? What if by countries?
+
 • What is the suicides trend according to year?
+
 • Are men far more prone to committing suicide than women?
+
 • Are young people or old people more likely to commit suicide?
+
 These problems are brought up and we will proceed with the analysis following the model below.
 
 Section 3: Data Sources
@@ -32,8 +37,11 @@ The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP 
 We developed an interactive dashboard for demo purpose, providing a user-friendly window that the user can filter data as he/she wants. Our shiny app consists of four modules:
 
 Data Overview – Allow the user to filter out suicides socio-economic data table based on country, year and age. The data extracted can be examined by search function and can be sorted by different variables.
+
 Country Trend – Allow the user to visualize suicides trend by a specific country.
+
 Descriptive Analysis – Interactive dashboard with bar chart, pie chart and line graph are included in the demo to how suicide rate is related to each factor.
+
 Inferential Analysis – Confidence Interval and Linear Regression techniques are applied.
 
 An example of the app may look like the picture below:
@@ -44,9 +52,13 @@ Methodology
 -----------
 Employed R packages:
 dplyr: A grammar of data manipulation. It’s useful for more efficient data cleansing, data analysis.
+
 tidyverse: It’s useful for data analysis processing and visualizing.
+
 ggalt: A compendium of new geometries, coordinate systems, statistical transformations, scales and fonts for ggplot2.
+
 countrycode: Standardize country names, convert them into one of eleven coding schemes, convert between coding schemes, and assign region descriptors.
+
 rworldmap: Enables mapping of country level and gridded user datasets.
 gridExtra: Provides a number of user-level functions to work with grid graphics, notably to arrange multiple grid-based plots on a page and draw tables.
 broom: Summarizes key information about statistical objects in tidy tibbles.
@@ -105,9 +117,15 @@ death number density of different countries. The last sector of “Inferential A
 Section 5: Summary
 ------------------
 Suicide, as an act of intentionally causing one's own death, has become the 10th leading casue to death worldwide. In this project, we import a dataset of worldwide suicide rates from 1985 to 2016 from Kaggle and try to explore the patterns behind rows and columns. After analysis, we also build an R Shiny dashboard to better depict out result.
+
 We first make a descriptive analysis using R. Through line chart, histogram, data table, pie chart and so forth, we illustrate the statistical parameters of suicide rates worldwide, grouped by years, genders, ages, countries and continents.
+
 Globally, the suicide rate has been decreasing in the 30 years. The suicide rate trendline reaches a peak in 1995 and then shows a steady decreasing till now. In the histogram grouped by continents, Europe ranks the first and Asia as the second. However, the curve indicates that Europe, Asia and Africa are having fewer and fewer people who commit suicide in recent years, while the situation in Oceania and Americas is rather concerning.
+
 As to sex and age, older groups have higher rates than younger ones, which is true throughout one’s life. The suicide rate of those aged 75+ has dropped by more than 50% since 1990 and the suicide rate in the ‘5-14’ category remains roughly static and small (< 1 per 100k per year). Men are about three times more likely to commit suicide than women. Although the absolute values are distinctive, the patterns of the both groups are similar. This means suicide rate is more likely to show a figure on a social level instead of within gender groups or age groups.
+
 We also picture the bar chart of the suicide rate of each country. It shows Lithuania’s rate has been highest by a large margin. Also, there is a large overrepresentation of European countries with high rates, few with low rates, which is consistent with our former conclusion.
+
 Besides descriptive exploration, we also conduct inferential analysis on the dataset. The regression model between rates and GDPs shows a weak positive relationship – richer the country is, more people are likely to end his or her life. In the assumption of normal distribution, we give out the confidence interval of the mean deaths of different generations and continents.
+
 In conclusion, it is happy to see a decrement of the suicide rate in the last 30 years as well as the dropping trend still exists. Nevertheless, the result that older people tend to commit suicide than teenagers and middle-aged people do astonish us. We might think that the elderly has less stress and more leisure time, but the fact is that they are the ones that the society often ignore. With the aging problem becoming more and more serios, it is vital to build a more comprehensive system to take care of the elderly’s mental healthiness. What’s more, despite the dropping of total numbers, the ratio between men and women remains at a level of 3 throughout the 30 years. Under such circumstance, we strongly suggest boys go for a psychologist should he have depression, anxiety or other uncontrollable disorders.
