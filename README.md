@@ -1,4 +1,4 @@
-Section 1: Introduction
+# Section 1: Introduction
 ------------
 Suicide has long been regarded as a serious public safety problem. According to the report of World Health Organization (WHO), about 800,000 people die of suicide every year, and the number of attempted suicides is much higher. The report also points out that the suicide phenomenon has a youth-oriented tendency that it has become the second leading cause of death after traffic accidents among teenagers. Faced with this trend, WHO has appealed to countries to take notice and carry out measures to prevent suicides.
 
@@ -12,23 +12,20 @@ In this project, we use the suicides dataset provided by Kaggle to analyse the p
 
 We mainly apply R programming to derive statistics and plot the relationships between factors. Then we use Shiny to interactively show the results. We want to draw inspiration from the analysis of suicide rates to make the public pay attention to personal mental health and take action to reduce the occurrence of suicides.
 
-Section 2: Overall Concept
+# Section 2: Overall Concept
 ---------------
 Our study aims to explore the suicides pattern from the year 1985 to the year 2016 through global, continent and country scales, as well as gender, age, GDP and generation factors. The descriptive exploration obtained will then be verified through statistical inferential analysis. We set the target audience as World Health Organization officer who are concerned to track the trend and factors associated with suicides, as we wish the analysis will provide insights and inspire necessary actions taken on suicides prevention.
 
 Problems we want to identify may include and not limited to:
 
-• What is the geographical distribution for suicides if we search by continents? What if by countries?
-
-• What is the suicides trend according to year?
-
-• Are men far more prone to committing suicide than women?
-
-• Are young people or old people more likely to commit suicide?
+- What is the geographical distribution for suicides if we search by continents? What if by countries?
+- What is the suicides trend according to year?
+- Are men far more prone to committing suicide than women?
+- Are young people or old people more likely to commit suicide?
 
 These problems are brought up and we will proceed with the analysis following the model below.
 
-Section 3: Data Sources
+# Section 3: Data Sources
 ------------
 The dataset we use is Suicide Rates Overview 1985 to 2015 dataset from Kaggle1.
 
@@ -36,46 +33,53 @@ The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP 
 
 We developed an interactive dashboard for demo purpose, providing a user-friendly window that the user can filter data as he/she wants. Our shiny app consists of four modules:
 
-Data Overview – Allow the user to filter out suicides socio-economic data table based on country, year and age. The data extracted can be examined by search function and can be sorted by different variables.
-
-Country Trend – Allow the user to visualize suicides trend by a specific country.
-
-Descriptive Analysis – Interactive dashboard with bar chart, pie chart and line graph are included in the demo to how suicide rate is related to each factor.
-
-Inferential Analysis – Confidence Interval and Linear Regression techniques are applied.
+- Data Overview – Allow the user to filter out suicides socio-economic data table based on country, year and age. The data extracted can be examined by search function and can be sorted by different variables.
+- Country Trend – Allow the user to visualize suicides trend by a specific country.
+- Descriptive Analysis – Interactive dashboard with bar chart, pie chart and line graph are included in the demo to how suicide rate is related to each factor.
+- Inferential Analysis – Confidence Interval and Linear Regression techniques are applied.
 
 An example of the app may look like the picture below:
 
-Section 4: Specific Methodology
+# Section 4: Specific Methodology
 --------------------
 Methodology
 -----------
 Employed R packages:
-dplyr: A grammar of data manipulation. It’s useful for more efficient data cleansing, data analysis.
-
-tidyverse: It’s useful for data analysis processing and visualizing.
-
-ggalt: A compendium of new geometries, coordinate systems, statistical transformations, scales and fonts for ggplot2.
+-dplyr: A grammar of data manipulation. It’s useful for more efficient data cleansing, data analysis.
+-tidyverse: It’s useful for data analysis processing and visualizing.
+-ggalt: A compendium of new geometries, coordinate systems, statistical transformations, scales and fonts for ggplot2.
 
 countrycode: Standardize country names, convert them into one of eleven coding schemes, convert between coding schemes, and assign region descriptors.
 
 rworldmap: Enables mapping of country level and gridded user datasets.
+
 gridExtra: Provides a number of user-level functions to work with grid graphics, notably to arrange multiple grid-based plots on a page and draw tables.
+
 broom: Summarizes key information about statistical objects in tidy tibbles.
+
 readxl: Import excel files into R.
+
 DT: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Shiny).
+
 Highcharter: Shortcut functions to plot R objects and offer numerous interactive chart types with a simple configuration syntax.
 Viridis: Set better color maps and browsers.
+
 ggplot2: A great and popular graphic creating module.
+
 Shiny & shinydashboard : Make users to build interactive web applications easily with R. Automatic "reactive" binding between inputs and outputs and extensive prebuilt widgets make it possible to build beautiful, responsive, and powerful applications with minimal effort.
 
 Data Preparation
 ----------------
 After importing the data to RStudio, firstly we amended names of columns and some countries to a standardized format.
+
 Besides, we removed rows for year 2016 because of the shortage of valid data. And countries “Dominica” and “Saint Kitts and Nevis” with too much missing values also have been removed.
+
 Meanwhile, column “HDI.for.year” has been also excluded due to the extremely large amount of missing values existed.
+
 We employed “countrycode” package in RStudio to match various countries with the continent that they belong to. As a result, a new column named “continent” has been established.
+
 GDP per capital has been graded and classified into five groups, generating a new column called “gdp_per_capita_grade”.
+
 Lastly, we designed and customized a theme including color, font size and layout for the data visualization.
 
 Descriptive Analysis
