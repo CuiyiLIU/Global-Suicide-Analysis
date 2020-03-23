@@ -35,7 +35,7 @@ The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP 
 
 We developed an interactive dashboard for demo purpose, providing a user-friendly window that the user can filter data as he/she wants. Our shiny app consists of four modules:
 
-<div align=center><img width="1000" height="800" src="IMG/2.3.png"/></div>
+<div align=center><img width="500" height="600" src="IMG/2.3.png"/></div>
 
 
 - Data Overview – Allow the user to filter out suicides socio-economic data table based on country, year and age. The data extracted can be examined by search function and can be sorted by different variables.
@@ -97,23 +97,18 @@ In this section, we are still trying to figure out that how the number of suicid
 
 Generally, people in Europe are more prone to commit suicide. As graphs indicate below, the average number of suicides in Europe from 1985 to 2015, about 18.09 per 100k population which accounted for 28.8%, ranked number one around the world. On the other hand, we can observe that the suicides number in Africa experienced a sharp rise from 1986 and significantly drop from 1995. It will be very beneficial for the prevention actions’ formulation and application if factors that caused such shifts can be identified.
 
-![](IMG/2.10.png)
-![](IMG/2.11.png)
-![](IMG/2.12.png)
-![](IMG/2.13.png)
+<img width="400" height="300" src="IMG/2.10.png"/><img width="400" height="300" src="IMG/2.11.png"/>
+<img width="400" height="300" src="IMG/2.12.png"/><img width="400" height="300" src="IMG/2.13.png"/>
 
 As we expected, the proportion of suicide number for gender and age holds still in different continent - males and elders were much more inclined to commit suicide.
 
-![](IMG/2.14.png)
-![](IMG/2.15.png)
+<img width="400" height="300" src="IMG/2.14.png"/><img width="400" height="300" src="IMG/2.15.png"/>
 
 ### Country
 Lastly, we are going to discover the number of suicides in each country. Based on the figures, we can notice that Lithuania, Russia and Sri Lanka ranked top three for having the highest average number of suicides. And it can also be observed directly through the map below. Blank regions are caused by the shortage of data for certain countries.
 
-![](IMG/2.16.png)
-![](IMG/2.17.png)
-![](IMG/2.18.png)
-![](IMG/2.19.png)
+<img width="400" height="300" src="IMG/2.16.png"/><img width="400" height="300" src="IMG/2.17.png"/>
+<img width="400" height="300" src="IMG/2.18.png"/><img width="400" height="300" src="IMG/2.19.png"/>
 
 ## Inferential Analysis
 ### Simple Linear Regression Model
