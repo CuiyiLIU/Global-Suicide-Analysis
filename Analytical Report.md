@@ -86,19 +86,19 @@ Firstly, we grouped data by years, gender and age and drawn interactive graphs b
 
 Besides, we can notice that the suicides number of males had always outnumbered that of females. It accounted for about 77.7% of the total suicides number from 1985 to 2015 and increased sharply since 1988.
 
-<img width="300" height="300" src="IMG/2.6.png"/><img width="420" height="300" src="IMG/2.7.png"/>
+<img width="400" height="300" src="IMG/2.6.png"/><img width="420" height="300" src="IMG/2.7.png"/>
 
 It is extremely necessary to mention that people above age 75 had stronger intention to commit suicide than others. They nearly made up ¼ of the total suicides. But fortunately, it seems like the suicides number of them had experienced a smooth decrease from 1900 to 2015.
 
-<img width="300" height="300" src="IMG/2.8.png"/><img width="420" height="300" src="IMG/2.9.png"/>
+<img width="400" height="300" src="IMG/2.8.png"/><img width="420" height="300" src="IMG/2.9.png"/>
 
 ### Continent
 In this section, we are still trying to figure out that how the number of suicides would change with time for different gender and age but based on the continental classification.
 
 Generally, people in Europe are more prone to commit suicide. As graphs indicate below, the average number of suicides in Europe from 1985 to 2015, about 18.09 per 100k population which accounted for 28.8%, ranked number one around the world. On the other hand, we can observe that the suicides number in Africa experienced a sharp rise from 1986 and significantly drop from 1995. It will be very beneficial for the prevention actions’ formulation and application if factors that caused such shifts can be identified.
 
-<img width="400" height="300" src="IMG/2.10.png"/><img width="400" height="300" src="IMG/2.11.png"/>
-<img width="400" height="300" src="IMG/2.12.png"/><img width="400" height="300" src="IMG/2.13.png"/>
+<img width="420" height="305" src="IMG/2.10.png"/><img width="420" height="305" src="IMG/2.11.png"/>
+<img width="420" height="305" src="IMG/2.12.png"/><img width="420" height="305" src="IMG/2.13.png"/>
 
 As we expected, the proportion of suicide number for gender and age holds still in different continent - males and elders were much more inclined to commit suicide.
 
