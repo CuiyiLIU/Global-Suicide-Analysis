@@ -1,4 +1,3 @@
-Global Suicide Analysis
 # 1.	File Structure:
  
 
