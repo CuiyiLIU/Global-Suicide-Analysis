@@ -40,19 +40,19 @@ An example of the app may look like the picture below:
 # Section 4: Specific Methodology
 ## Methodology
 Employed R packages:
--dplyr: A grammar of data manipulation. It’s useful for more efficient data cleansing, data analysis.
--tidyverse: It’s useful for data analysis processing and visualizing.
+- dplyr: A grammar of data manipulation. It’s useful for more efficient data cleansing, data analysis.
+- tidyverse: It’s useful for data analysis processing and visualizing.
 -ggalt: A compendium of new geometries, coordinate systems, statistical transformations, scales and fonts for ggplot2.
--countrycode: Standardize country names, convert them into one of eleven coding schemes, convert between coding schemes, and assign region descriptors.
--rworldmap: Enables mapping of country level and gridded user datasets.
--gridExtra: Provides a number of user-level functions to work with grid graphics, notably to arrange multiple grid-based plots on a page and draw tables.
--broom: Summarizes key information about statistical objects in tidy tibbles.
--readxl: Import excel files into R.
--DT: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Shiny).
--Highcharter: Shortcut functions to plot R objects and offer numerous interactive chart types with a simple configuration syntax.
--Viridis: Set better color maps and browsers.
--ggplot2: A great and popular graphic creating module.
--Shiny & shinydashboard : Make users to build interactive web applications easily with R. Automatic "reactive" binding between inputs and outputs and extensive prebuilt widgets make it possible to build beautiful, responsive, and powerful applications with minimal effort.
+- countrycode: Standardize country names, convert them into one of eleven coding schemes, convert between coding schemes, and assign region descriptors.
+- rworldmap: Enables mapping of country level and gridded user datasets.
+- gridExtra: Provides a number of user-level functions to work with grid graphics, notably to arrange multiple grid-based plots on a page and draw tables.
+- broom: Summarizes key information about statistical objects in tidy tibbles.
+- readxl: Import excel files into R.
+- DT: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Shiny).
+- Highcharter: Shortcut functions to plot R objects and offer numerous interactive chart types with a simple configuration syntax.
+- Viridis: Set better color maps and browsers.
+- ggplot2: A great and popular graphic creating module.
+- Shiny & shinydashboard : Make users to build interactive web applications easily with R. Automatic "reactive" binding between inputs and outputs and extensive prebuilt widgets make it possible to build beautiful, responsive, and powerful applications with minimal effort.
 
 ## Data Preparation
 After importing the data to RStudio, firstly we amended names of columns and some countries to a standardized format.
