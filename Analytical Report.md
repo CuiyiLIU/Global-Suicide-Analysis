@@ -23,8 +23,6 @@ Problems we want to identify may include and not limited to:
 
 These problems are brought up and we will proceed with the analysis following the model below.
 
-<div align=center><img width="150" height="150" src="IMG/2.1.png"/></div>
-
 [](IMG/2.1.png)
 
 # Section 3: Data Sources
@@ -87,8 +85,8 @@ Firstly, we grouped data by years, gender and age and drawn interactive graphs b
 
 Besides, we can notice that the suicides number of males had always outnumbered that of females. It accounted for about 77.7% of the total suicides number from 1985 to 2015 and increased sharply since 1988.
 
-![](IMG/2.6.png)
-![](IMG/2.7.png)
+<div align=center><img width="400" height="300" src="IMG/2.6.png"/></div>
+<div align=center><img width="400" height="300" src="IMG/2.7.png"/></div>
 
 It is extremely necessary to mention that people above age 75 had stronger intention to commit suicide than others. They nearly made up ¼ of the total suicides. But fortunately, it seems like the suicides number of them had experienced a smooth decrease from 1900 to 2015.
 
