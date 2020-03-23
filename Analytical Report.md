@@ -22,7 +22,7 @@ Problems we want to identify may include and not limited to:
 - Are young people or old people more likely to commit suicide?
 
 These problems are brought up and we will proceed with the analysis following the model below.
-
+![](IMG/2.1)
 # Section 3: Data Sources
 The dataset we use is Suicide Rates Overview 1985 to 2015 dataset from Kaggle1.
 
