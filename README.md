@@ -1,10 +1,15 @@
 Section 1: Introduction
 ------------
 Suicide has long been regarded as a serious public safety problem. According to the report of World Health Organization (WHO), about 800,000 people die of suicide every year, and the number of attempted suicides is much higher. The report also points out that the suicide phenomenon has a youth-oriented tendency that it has become the second leading cause of death after traffic accidents among teenagers. Faced with this trend, WHO has appealed to countries to take notice and carry out measures to prevent suicides.
+
 According to the article reported by the Economist in 2018, global suicide rates have fallen by 29% since 2000, thanks to urbanization and government policies. The United States, however, is the exception with the figure rising by 18%. The differences in suicide rates among countries may owe to diverse demographic characteristics and economic factors. One of the tasks in the project is to visualize the differences.
+
 Although the suicide rate shows different tendencies among countries, as we concerned, it always shows similar patterns in all the countries. We believe that in most countries of the world, older people are more likely to commit suicides than youngsters, and men are more likely to commit suicide than women. What we need to do is to verify and confirm the pattern by doing statistical analysis.
+
 In a word, it is helpful to understand the changes in suicide mortality rates among countries and generations, so effective suicide prevention strategies can be developed for vulnerable populations.
+
 In this project, we use the suicides dataset provided by Kaggle to analyse the pattern and trends of suicides in different countries. The dataset contains global, regional and 195-country suicide mortality patterns from 1985 to 2016 in the form of age, gender, demographic and economic indicators, etc. We will analyse the global suicide rates throughout the period and discover the differences among countries and continents. The project aims to explore the relationship between suicide rates and age groups, gender, countries, continents, and GDP.
+
 We mainly apply R programming to derive statistics and plot the relationships between factors. Then we use Shiny to interactively show the results. We want to draw inspiration from the analysis of suicide rates to make the public pay attention to personal mental health and take action to reduce the occurrence of suicides.
 
 Section 2: Overall Concept
@@ -21,9 +26,10 @@ These problems are brought up and we will proceed with the analysis following th
 Section 3: Data Sources
 ------------
 The dataset we use is Suicide Rates Overview 1985 to 2015 dataset from Kaggle1.
-The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP Per capita, and generation. We recode country as some of the country names are wrong or not standardized and use it to add a new column named Continent based on country. We reclassify countries that have been coded as 'Americas' into 'North America' and 'South America'.
-We developed an interactive dashboard for demo purpose, providing a user-friendly window that the user can filter data as he/she wants. Our shiny app consists of four modules:
 
+The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP Per capita, and generation. We recode country as some of the country names are wrong or not standardized and use it to add a new column named Continent based on country. We reclassify countries that have been coded as 'Americas' into 'North America' and 'South America'.
+
+We developed an interactive dashboard for demo purpose, providing a user-friendly window that the user can filter data as he/she wants. Our shiny app consists of four modules:
 
 Data Overview – Allow the user to filter out suicides socio-economic data table based on country, year and age. The data extracted can be examined by search function and can be sorted by different variables.
 Country Trend – Allow the user to visualize suicides trend by a specific country.
