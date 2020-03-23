@@ -22,20 +22,23 @@ Problems we want to identify may include and not limited to:
 - Are young people or old people more likely to commit suicide?
 
 These problems are brought up and we will proceed with the analysis following the model below.
-![](IMG/2.1)
+![](IMG/2.1.png)
+
 # Section 3: Data Sources
 The dataset we use is Suicide Rates Overview 1985 to 2015 dataset from Kaggle1.
-
+The dataset has 12 attributes, being:
+![](IMG/2.2.png)
 The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP Per capita, and generation. We recode country as some of the country names are wrong or not standardized and use it to add a new column named Continent based on country. We reclassify countries that have been coded as 'Americas' into 'North America' and 'South America'.
 
 We developed an interactive dashboard for demo purpose, providing a user-friendly window that the user can filter data as he/she wants. Our shiny app consists of four modules:
-
+![](IMG/2.3.png)
 - Data Overview – Allow the user to filter out suicides socio-economic data table based on country, year and age. The data extracted can be examined by search function and can be sorted by different variables.
 - Country Trend – Allow the user to visualize suicides trend by a specific country.
 - Descriptive Analysis – Interactive dashboard with bar chart, pie chart and line graph are included in the demo to how suicide rate is related to each factor.
 - Inferential Analysis – Confidence Interval and Linear Regression techniques are applied.
 
 An example of the app may look like the picture below:
+![](IMG/2.4.png)
 
 # Section 4: Specific Methodology
 ## Methodology
@@ -71,36 +74,53 @@ Lastly, we designed and customized a theme including color, font size and layout
 In general, we intend to analyze data from three main scales: worldwide, continent and country.
 ### Worldwide
 Firstly, we grouped data by years, gender and age and drawn interactive graphs by using “Highcharter” package to display the overall trend that how the number of suicides would change with time. As figure shows below, it reached a peak in 1995 that there were about 15 people out of every 100k to choose ending their lives.
+![](IMG/2.5.png)
 Besides, we can notice that the suicides number of males had always outnumbered that of females. It accounted for about 77.7% of the total suicides number from 1985 to 2015 and increased sharply since 1988.
+![](IMG/2.6.png)![](IMG/2.7.png)
 It is extremely necessary to mention that people above age 75 had stronger intention to commit suicide than others. They nearly made up ¼ of the total suicides. But fortunately, it seems like the suicides number of them had experienced a smooth decrease from 1900 to 2015.
+![](IMG/2.8.png)![](IMG/2.9.png)
 
 ### Continent
 In this section, we are still trying to figure out that how the number of suicides would change with time for different gender and age but based on the continental classification.
+
 Generally, people in Europe are more prone to commit suicide. As graphs indicate below, the average number of suicides in Europe from 1985 to 2015, about 18.09 per 100k population which accounted for 28.8%, ranked number one around the world. On the other hand, we can observe that the suicides number in Africa experienced a sharp rise from 1986 and significantly drop from 1995. It will be very beneficial for the prevention actions’ formulation and application if factors that caused such shifts can be identified.
+![](IMG/2.10.png)![](IMG/2.11.png)
+![](IMG/2.12.png)![](IMG/2.13.png)
 As we expected, the proportion of suicide number for gender and age holds still in different continent - males and elders were much more inclined to commit suicide.
+![](IMG/2.14.png)![](IMG/2.15.png)
 
 ### Country
 Lastly, we are going to discover the number of suicides in each country. Based on the figures, we can notice that Lithuania, Russia and Sri Lanka ranked top three for having the highest average number of suicides. And it can also be observed directly through the map below. Blank regions are caused by the shortage of data for certain countries.
+![](IMG/2.16.png)![](IMG/2.17.png)
+![](IMG/2.18.png)![](IMG/2.19.png)
 
 ## Inferential Analysis
 ### Simple Linear Regression Model
 In this part, two linear regression models have been created to discover the relationship between the number of suicides, GDP per capital and population by implementing the “lm” function in R. Extreme values has been excluded for more accurate results.
+![](IMG/2.20.png)![](IMG/2.21.png)
 According to the summary report, we can conclude that the number of suicides had a strong positive correlation with the GDP per capital and population, due to the extremely low p-values (both <0.05). Consequently, we can predict the future suicides number based on the coefficients that these two models generated.
+![](IMG/2.22.png)![](IMG/2.23.png)
 
 ### Multivariate Linear Regression Model
 We do multivariate regression analysis to find out which variables affect the number of suicides. Before doing regression analysis, it is essential to transform skewed variables to be normally distributed and select useful variables to build model.
+![](IMG/2.24.png)![](IMG/2.25.png)
 After transformation, we include independent variables to regression model by using “lm” function one by one to see the variation between the number of suicides and dependent variables. The result shows that with more variables included in the model, the adjusted R Squared gets larger. The model includes all the independent variables is the best fit model with the largest adjusted R Squared of 0.9149, meaning these variables can explain 92.49% of the variation of the suicides number. The ANOVA also shows that these variables have significant predictive power to the suicides number. The stepwise regression selects the same variables as the former analysis.
+![](IMG/2.26.png)
+![](IMG/2.27.png)
+![](IMG/2.28.png)![](IMG/2.29.png)
 We use “summary(lm.beta())” function to see which variables have the greatest significance to the model. The result shows “gdp for year” has the greatest predictive power, followed by “suicides per 100k”, “gdp per capital” and so on. From the coefficients, we can interpret that the number of suicides increases with GDP value while decreases with GDP per capita.
+![](IMG/2.30.png)
 
 ### Confidence Interval
 Last but not least, we intend to construct a confidence interval as an estimate of the mean suicides number for different continent and generation stated as a range with a lower and upper limit and a specific degree of certainty which is 95%. Although the true mean suicides numbers may or may not be in this interval, 95% of intervals formed in this manner will contain the true means.
+![](IMG/2.31.png)![](IMG/2.32.png)
 
 ### ANOVA
 In this part, analysis of variance (ANOVA) has been performed to compare multiple means of suicides number for various generations and graded GDP per capital and evaluate whether the difference between them is significant or not.
 
 -Null Hypothesis: All population means are equal
 -Alternate Hypothesis: At least one population mean is different
-
+![](IMG/2.33.png)![](IMG/2.34.png)
 By implementing the “aov” function, we can conclude that the null hypotheses are rejected and we have sufficient evidence to support the claim that there are significant differences between the groups generation and between the groups graded GDP, due to the very low p-values (<0.005).
 
 ## Shiny
