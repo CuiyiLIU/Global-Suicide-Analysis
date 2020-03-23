@@ -1,4 +1,4 @@
-# Global Suicide Analysis
+Global Suicide Analysis
 # 1.	File Structure:
  
 
@@ -26,9 +26,11 @@ Please take note below packages are required to be installed before running Shin
 
 # Testing
 After installation completes, please run app shiny_v1.0.R 
-## Test 1: If below screening comes out, verification 1 success.
+## Test 1:
+If below screening comes out, verification 1 success.
  
-## Test 2: Click menu Exploratory Analysis – Continent, If below screening comes out, verification 2 success.
+## Test 2:
+Click menu Exploratory Analysis – Continent, If below screening comes out, verification 2 success.
  
 
 
