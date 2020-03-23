@@ -130,7 +130,7 @@ After transformation, we include independent variables to regression model by us
 <img width="480" height="200" src="IMG/2.26.png"/>
 <img width="420" height="305" src="IMG/2.27.png"/>
 <img width="420" height="225" src="IMG/2.28.png"/>
-<img width="480" height="160" src="IMG/2.29.png"/>
+<img width="300" height="120" src="IMG/2.29.png"/>
 
 We use “summary(lm.beta())” function to see which variables have the greatest significance to the model. The result shows “gdp for year” has the greatest predictive power, followed by “suicides per 100k”, “gdp per capital” and so on. From the coefficients, we can interpret that the number of suicides increases with GDP value while decreases with GDP per capita.
 
