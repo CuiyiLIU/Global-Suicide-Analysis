@@ -1,7 +1,7 @@
-# 1.	File Structure:
+# File Structure:
  
 
-# 2.	Step-by-Step Manual
+# Step-by-Step Manual
 ## Move Files
 Please keep data file master.xlsx, master.csv, shiny_v1.0. R and Base_Analysis.R at the same working directory
 
@@ -23,7 +23,7 @@ Please take note below packages are required to be installed before running Shin
 - install.packages(highcharter)
 - install.packages(viridis)
 
-# 3. Testing
+# Testing
 After installation completes, please run app shiny_v1.0.R 
 ## Test 1:
 If below screening comes out, verification 1 success.
