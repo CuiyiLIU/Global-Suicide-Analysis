@@ -123,13 +123,12 @@ According to the summary report, we can conclude that the number of suicides had
 ### Multivariate Linear Regression Model
 We do multivariate regression analysis to find out which variables affect the number of suicides. Before doing regression analysis, it is essential to transform skewed variables to be normally distributed and select useful variables to build model.
 
-![](IMG/2.24.png)
-![](IMG/2.25.png)
+<img width="420" height="305" src="IMG/2.24.png"/><img width="420" height="305" src="IMG/2.25.png"/>
 
 After transformation, we include independent variables to regression model by using “lm” function one by one to see the variation between the number of suicides and dependent variables. The result shows that with more variables included in the model, the adjusted R Squared gets larger. The model includes all the independent variables is the best fit model with the largest adjusted R Squared of 0.9149, meaning these variables can explain 92.49% of the variation of the suicides number. The ANOVA also shows that these variables have significant predictive power to the suicides number. The stepwise regression selects the same variables as the former analysis.
 
-![](IMG/2.26.png)
-![](IMG/2.27.png)
+<img width="420" height="305" src="IMG/2.26.png"/><img width="420" height="305" src="IMG/2.27.png"/>
+
 ![](IMG/2.28.png)
 ![](IMG/2.29.png)
 
@@ -140,8 +139,7 @@ We use “summary(lm.beta())” function to see which variables have the greates
 ### Confidence Interval
 Last but not least, we intend to construct a confidence interval as an estimate of the mean suicides number for different continent and generation stated as a range with a lower and upper limit and a specific degree of certainty which is 95%. Although the true mean suicides numbers may or may not be in this interval, 95% of intervals formed in this manner will contain the true means.
 
-![](IMG/2.31.png)
-![](IMG/2.32.png)
+<img width="420" height="305" src="IMG/2.31.png"/><img width="420" height="305" src="IMG/2.32.png"/>
 
 ### ANOVA
 In this part, analysis of variance (ANOVA) has been performed to compare multiple means of suicides number for various generations and graded GDP per capital and evaluate whether the difference between them is significant or not.
@@ -149,8 +147,7 @@ In this part, analysis of variance (ANOVA) has been performed to compare multipl
 - Null Hypothesis: All population means are equal
 - Alternate Hypothesis: At least one population mean is different
 
-![](IMG/2.33.png)
-![](IMG/2.34.png)
+<img width="420" height="305" src="IMG/2.33.png"/><img width="420" height="305" src="IMG/2.34.png"/>
 
 By implementing the “aov” function, we can conclude that the null hypotheses are rejected and we have sufficient evidence to support the claim that there are significant differences between the groups generation and between the groups graded GDP, due to the very low p-values (<0.005).
 
