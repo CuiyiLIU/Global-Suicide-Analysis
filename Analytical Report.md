@@ -23,7 +23,9 @@ Problems we want to identify may include and not limited to:
 
 These problems are brought up and we will proceed with the analysis following the model below.
 
-<center>![](IMG/2.1.png)</center>
+<div align=center><img width="150" height="150" src="IMG/2.1.png"/></div>
+
+[](IMG/2.1.png)
 
 # Section 3: Data Sources
 The dataset we use is Suicide Rates Overview 1985 to 2015 dataset from Kaggle1.
