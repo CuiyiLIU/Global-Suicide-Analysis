@@ -102,25 +102,23 @@ Generally, people in Europe are more prone to commit suicide. As graphs indicate
 
 As we expected, the proportion of suicide number for gender and age holds still in different continent - males and elders were much more inclined to commit suicide.
 
-<img width="400" height="300" src="IMG/2.14.png"/><img width="400" height="300" src="IMG/2.15.png"/>
+<img width="420" height="305" src="IMG/2.14.png"/><img width="420" height="305" src="IMG/2.15.png"/>
 
 ### Country
 Lastly, we are going to discover the number of suicides in each country. Based on the figures, we can notice that Lithuania, Russia and Sri Lanka ranked top three for having the highest average number of suicides. And it can also be observed directly through the map below. Blank regions are caused by the shortage of data for certain countries.
 
-<img width="400" height="300" src="IMG/2.16.png"/><img width="400" height="300" src="IMG/2.17.png"/>
-<img width="400" height="300" src="IMG/2.18.png"/><img width="400" height="300" src="IMG/2.19.png"/>
+<img width="420" height="305" src="IMG/2.16.png"/><img width="420" height="305" src="IMG/2.17.png"/>
+<img width="420" height="305" src="IMG/2.18.png"/><img width="420" height="305" src="IMG/2.19.png"/>
 
 ## Inferential Analysis
 ### Simple Linear Regression Model
 In this part, two linear regression models have been created to discover the relationship between the number of suicides, GDP per capital and population by implementing the “lm” function in R. Extreme values has been excluded for more accurate results.
 
-![](IMG/2.20.png)
-![](IMG/2.21.png)
+<img width="420" height="305" src="IMG/2.20.png"/><img width="420" height="305" src="IMG/2.21.png"/>
 
 According to the summary report, we can conclude that the number of suicides had a strong positive correlation with the GDP per capital and population, due to the extremely low p-values (both <0.05). Consequently, we can predict the future suicides number based on the coefficients that these two models generated.
 
-![](IMG/2.22.png)
-![](IMG/2.23.png)
+<img width="420" height="305" src="IMG/2.22.png"/><img width="420" height="305" src="IMG/2.23.png"/>
 
 ### Multivariate Linear Regression Model
 We do multivariate regression analysis to find out which variables affect the number of suicides. Before doing regression analysis, it is essential to transform skewed variables to be normally distributed and select useful variables to build model.
