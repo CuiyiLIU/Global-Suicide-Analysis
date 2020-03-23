@@ -24,7 +24,6 @@ Problems we want to identify may include and not limited to:
 These problems are brought up and we will proceed with the analysis following the model below.
 
 # Section 3: Data Sources
-------------
 The dataset we use is Suicide Rates Overview 1985 to 2015 dataset from Kaggle1.
 
 The variables we use are: Country, Year, Sex, Age, Suicides no, population, GDP Per capita, and generation. We recode country as some of the country names are wrong or not standardized and use it to add a new column named Continent based on country. We reclassify countries that have been coded as 'Americas' into 'North America' and 'South America'.
@@ -39,35 +38,23 @@ We developed an interactive dashboard for demo purpose, providing a user-friendl
 An example of the app may look like the picture below:
 
 # Section 4: Specific Methodology
---------------------
-Methodology
------------
+## Methodology
 Employed R packages:
 -dplyr: A grammar of data manipulation. It’s useful for more efficient data cleansing, data analysis.
 -tidyverse: It’s useful for data analysis processing and visualizing.
 -ggalt: A compendium of new geometries, coordinate systems, statistical transformations, scales and fonts for ggplot2.
+-countrycode: Standardize country names, convert them into one of eleven coding schemes, convert between coding schemes, and assign region descriptors.
+-rworldmap: Enables mapping of country level and gridded user datasets.
+-gridExtra: Provides a number of user-level functions to work with grid graphics, notably to arrange multiple grid-based plots on a page and draw tables.
+-broom: Summarizes key information about statistical objects in tidy tibbles.
+-readxl: Import excel files into R.
+-DT: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Shiny).
+-Highcharter: Shortcut functions to plot R objects and offer numerous interactive chart types with a simple configuration syntax.
+-Viridis: Set better color maps and browsers.
+-ggplot2: A great and popular graphic creating module.
+-Shiny & shinydashboard : Make users to build interactive web applications easily with R. Automatic "reactive" binding between inputs and outputs and extensive prebuilt widgets make it possible to build beautiful, responsive, and powerful applications with minimal effort.
 
-countrycode: Standardize country names, convert them into one of eleven coding schemes, convert between coding schemes, and assign region descriptors.
-
-rworldmap: Enables mapping of country level and gridded user datasets.
-
-gridExtra: Provides a number of user-level functions to work with grid graphics, notably to arrange multiple grid-based plots on a page and draw tables.
-
-broom: Summarizes key information about statistical objects in tidy tibbles.
-
-readxl: Import excel files into R.
-
-DT: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Shiny).
-
-Highcharter: Shortcut functions to plot R objects and offer numerous interactive chart types with a simple configuration syntax.
-Viridis: Set better color maps and browsers.
-
-ggplot2: A great and popular graphic creating module.
-
-Shiny & shinydashboard : Make users to build interactive web applications easily with R. Automatic "reactive" binding between inputs and outputs and extensive prebuilt widgets make it possible to build beautiful, responsive, and powerful applications with minimal effort.
-
-Data Preparation
-----------------
+## Data Preparation
 After importing the data to RStudio, firstly we amended names of columns and some countries to a standardized format.
 
 Besides, we removed rows for year 2016 because of the shortage of valid data. And countries “Dominica” and “Saint Kitts and Nevis” with too much missing values also have been removed.
@@ -80,44 +67,46 @@ GDP per capital has been graded and classified into five groups, generating a ne
 
 Lastly, we designed and customized a theme including color, font size and layout for the data visualization.
 
-Descriptive Analysis
---------------------
+## Descriptive Analysis
 In general, we intend to analyze data from three main scales: worldwide, continent and country.
-Worldwide
+### Worldwide
 Firstly, we grouped data by years, gender and age and drawn interactive graphs by using “Highcharter” package to display the overall trend that how the number of suicides would change with time. As figure shows below, it reached a peak in 1995 that there were about 15 people out of every 100k to choose ending their lives.
 Besides, we can notice that the suicides number of males had always outnumbered that of females. It accounted for about 77.7% of the total suicides number from 1985 to 2015 and increased sharply since 1988.
 It is extremely necessary to mention that people above age 75 had stronger intention to commit suicide than others. They nearly made up ¼ of the total suicides. But fortunately, it seems like the suicides number of them had experienced a smooth decrease from 1900 to 2015.
-Continent
+
+### Continent
 In this section, we are still trying to figure out that how the number of suicides would change with time for different gender and age but based on the continental classification.
 Generally, people in Europe are more prone to commit suicide. As graphs indicate below, the average number of suicides in Europe from 1985 to 2015, about 18.09 per 100k population which accounted for 28.8%, ranked number one around the world. On the other hand, we can observe that the suicides number in Africa experienced a sharp rise from 1986 and significantly drop from 1995. It will be very beneficial for the prevention actions’ formulation and application if factors that caused such shifts can be identified.
 As we expected, the proportion of suicide number for gender and age holds still in different continent - males and elders were much more inclined to commit suicide.
-Country
+
+### Country
 Lastly, we are going to discover the number of suicides in each country. Based on the figures, we can notice that Lithuania, Russia and Sri Lanka ranked top three for having the highest average number of suicides. And it can also be observed directly through the map below. Blank regions are caused by the shortage of data for certain countries.
 
-Inferential Analysis
---------------------
-Simple Linear Regression Model
+## Inferential Analysis
+### Simple Linear Regression Model
 In this part, two linear regression models have been created to discover the relationship between the number of suicides, GDP per capital and population by implementing the “lm” function in R. Extreme values has been excluded for more accurate results.
 According to the summary report, we can conclude that the number of suicides had a strong positive correlation with the GDP per capital and population, due to the extremely low p-values (both <0.05). Consequently, we can predict the future suicides number based on the coefficients that these two models generated.
-Multivariate Linear Regression Model
+
+### Multivariate Linear Regression Model
 We do multivariate regression analysis to find out which variables affect the number of suicides. Before doing regression analysis, it is essential to transform skewed variables to be normally distributed and select useful variables to build model.
 After transformation, we include independent variables to regression model by using “lm” function one by one to see the variation between the number of suicides and dependent variables. The result shows that with more variables included in the model, the adjusted R Squared gets larger. The model includes all the independent variables is the best fit model with the largest adjusted R Squared of 0.9149, meaning these variables can explain 92.49% of the variation of the suicides number. The ANOVA also shows that these variables have significant predictive power to the suicides number. The stepwise regression selects the same variables as the former analysis.
 We use “summary(lm.beta())” function to see which variables have the greatest significance to the model. The result shows “gdp for year” has the greatest predictive power, followed by “suicides per 100k”, “gdp per capital” and so on. From the coefficients, we can interpret that the number of suicides increases with GDP value while decreases with GDP per capita.
-Confidence Interval
+
+### Confidence Interval
 Last but not least, we intend to construct a confidence interval as an estimate of the mean suicides number for different continent and generation stated as a range with a lower and upper limit and a specific degree of certainty which is 95%. Although the true mean suicides numbers may or may not be in this interval, 95% of intervals formed in this manner will contain the true means.
-ANOVA
+
+### ANOVA
 In this part, analysis of variance (ANOVA) has been performed to compare multiple means of suicides number for various generations and graded GDP per capital and evaluate whether the difference between them is significant or not.
-Null Hypothesis: All population means are equal
-Alternate Hypothesis: At least one population mean is different
+
+-Null Hypothesis: All population means are equal
+-Alternate Hypothesis: At least one population mean is different
+
 By implementing the “aov” function, we can conclude that the null hypotheses are rejected and we have sufficient evidence to support the claim that there are significant differences between the groups generation and between the groups graded GDP, due to the very low p-values (<0.005).
 
-Shiny
------
-In the Shiny dashboard, there are four different blocks. “Data Overview” allows the user to filter out the raw data by selecting country, year and age. This block also supports keyword search. In “Country Trend” block, the user can generate different trendlines of deaths numbers, by simply selecting different countries and time periods. A dropdown list and a sliding number axis are introduced in this sector. “Exploratory Analysis” allows the user to generally understand our analytic framework. We even dye a world map in different colours to show the
-death number density of different countries. The last sector of “Inferential Analysis” shows the result of linear regression and confidence level.
+## Shiny
+In the Shiny dashboard, there are four different blocks. “Data Overview” allows the user to filter out the raw data by selecting country, year and age. This block also supports keyword search. In “Country Trend” block, the user can generate different trendlines of deaths numbers, by simply selecting different countries and time periods. A dropdown list and a sliding number axis are introduced in this sector. “Exploratory Analysis” allows the user to generally understand our analytic framework. We even dye a world map in different colours to show the death number density of different countries. The last sector of “Inferential Analysis” shows the result of linear regression and confidence level.
 
-Section 5: Summary
-------------------
+# Section 5: Summary
 Suicide, as an act of intentionally causing one's own death, has become the 10th leading casue to death worldwide. In this project, we import a dataset of worldwide suicide rates from 1985 to 2016 from Kaggle and try to explore the patterns behind rows and columns. After analysis, we also build an R Shiny dashboard to better depict out result.
 
 We first make a descriptive analysis using R. Through line chart, histogram, data table, pie chart and so forth, we illustrate the statistical parameters of suicide rates worldwide, grouped by years, genders, ages, countries and continents.
