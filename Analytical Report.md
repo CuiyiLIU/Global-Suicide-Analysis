@@ -127,14 +127,12 @@ We do multivariate regression analysis to find out which variables affect the nu
 
 After transformation, we include independent variables to regression model by using “lm” function one by one to see the variation between the number of suicides and dependent variables. The result shows that with more variables included in the model, the adjusted R Squared gets larger. The model includes all the independent variables is the best fit model with the largest adjusted R Squared of 0.9149, meaning these variables can explain 92.49% of the variation of the suicides number. The ANOVA also shows that these variables have significant predictive power to the suicides number. The stepwise regression selects the same variables as the former analysis.
 
-<img width="420" height="305" src="IMG/2.26.png"/><img width="420" height="305" src="IMG/2.27.png"/>
-
-![](IMG/2.28.png)
-![](IMG/2.29.png)
+<img width="420" height="250" src="IMG/2.26.png"/><img width="420" height="305" src="IMG/2.27.png"/>
+<img width="420" height="305" src="IMG/2.28.png"/><img width="420" height="305" src="IMG/2.29.png"/>
 
 We use “summary(lm.beta())” function to see which variables have the greatest significance to the model. The result shows “gdp for year” has the greatest predictive power, followed by “suicides per 100k”, “gdp per capital” and so on. From the coefficients, we can interpret that the number of suicides increases with GDP value while decreases with GDP per capita.
 
-![](IMG/2.30.png)
+<div align=center><img width="420" height="305" src="IMG/2.30.png"/></div>
 
 ### Confidence Interval
 Last but not least, we intend to construct a confidence interval as an estimate of the mean suicides number for different continent and generation stated as a range with a lower and upper limit and a specific degree of certainty which is 95%. Although the true mean suicides numbers may or may not be in this interval, 95% of intervals formed in this manner will contain the true means.
