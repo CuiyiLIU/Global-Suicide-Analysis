@@ -23,7 +23,7 @@ Please take note below packages are required to be installed before running Shin
 - install.packages(highcharter)
 - install.packages(viridis)
 
-# Testing
+# 3. Testing
 After installation completes, please run app shiny_v1.0.R 
 ## Test 1:
 If below screening comes out, verification 1 success.
